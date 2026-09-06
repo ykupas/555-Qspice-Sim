@@ -11,16 +11,29 @@ The NE555 timer is arguably one of the most famous, versatile, and widely used i
 
 Despite being over 50 years old, the 555 timer remains a staple in both educational kits and professional industrial applications. Its enduring popularity comes from its robust design, it can handle a wide range of power supply voltages (typically from 4.5V to 15V) and can source or sink enough current to directly drive components like LEDs, small motors, and relays.
 
-## The Three Modes of Operation
-The true power of the NE555 lies in its flexibility. By changing how resistors and capacitors are connected to its eight pins, it can operate in three fundamental modes:
-
-### Astable Mode (Oscillator)
-In this mode, the 555 timer acts as a continuous oscillator, outputting a continuous stream of rectangular pulses. This is commonly used for flashing LEDs, generating audio tones, and providing clock signals for digital circuits.
+## The Two Modes of Operation
+The true power of the NE555 lies in its flexibility. By changing how resistors and capacitors are connected to its eight pins, it can operate in two fundamental modes:
 
 ### Monostable Mode (One-Shot) 
 Here, the timer acts as a "one-shot" pulse generator. When triggered by an external input, the 555 outputs a single pulse of a specific duration (determined by a single resistor and capacitor) before returning to its resting state. This is perfect for creating timers, delay circuits, and debounce switches.
 
-### Bistable Mode (Flip-Flop)
-In this configuration, the 555 acts like a simple flip-flop logic gate. It has two stable states (high and low) and transitions between them only when it receives specific trigger or reset signals.
+![Monostable operation](img/monostable-operation.png)
+
+### Astable Mode (Oscillator)
+In this mode, the 555 timer acts as a continuous oscillator, outputting a continuous stream of rectangular pulses. This is commonly used for flashing LEDs, generating audio tones, and providing clock signals for digital circuits.
+
+![Astable operation](img/astable-operation.png)
 
 Whether you are a hobbyist blinking your first LED or an engineer designing a complex control system, the NE555 serves as an excellent introduction to analog and digital signal.
+
+## Qspice Circuit Simulation
+
+### Monostable
+
+![Monostable Circuit](img/monostable-circuit.png)
+![Monostable Results](img/monostable-results.png)
+
+### Astable
+
+![Astable Circuit](img/astable-circuit.png)
+![Astable Results](img/astable-results.png)
